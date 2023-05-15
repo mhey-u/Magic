@@ -1,0 +1,38 @@
+// Функция для генерации случайного числа от 1 до 10
+function generateRandomNumber() {
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  return randomNumber;
+}
+
+// Функция для предсказания следующего случайного числа
+function predictNextNumber() {
+  const currentNumber = generateRandomNumber();
+  const nextNumber = currentNumber + 1;
+  console.log(`Магический фокусник предсказывает следующее число: ${nextNumber}`);
+}
+
+// Функция для проверки, является ли число четным
+function isEvenNumber(number) {
+  return number % 2 === 0;
+}
+
+// Функция для выполнения магического трюка
+function performMagicTrick() {
+  const randomNumber = generateRandomNumber();
+  console.log(`Выбрано случайное число: ${randomNumber}`);
+  
+  if (isEvenNumber(randomNumber)) {
+    console.log("Магический фокусник говорит, что это число четное!");
+  } else {
+    console.log("Магический фокусник говорит, что это число нечетное!");
+  }
+}
+
+// Пример использования
+console.log("=== Приветствуем вас, уважаемые зрители! ===");
+console.log("Подготовьтесь к удивительному магическому фокусу...");
+console.log("Сейчас я предскажу следующее число!");
+predictNextNumber();
+console.log("А теперь выберем случайное число и определим его четность!");
+performMagicTrick();
+console.log("=== Благодарим вас за внимание! До новых встреч! ===");
